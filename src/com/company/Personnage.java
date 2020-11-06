@@ -15,6 +15,7 @@ public abstract class Personnage {
 
         }
 
+        // Si l'arme utilisé est la bonne sinon ne fait rien
         public String getVulnerabilite() {return mVulnerabilite;}
 
         public int getVie() {return mVie;}
@@ -38,6 +39,7 @@ public abstract class Personnage {
             return 0;
     }
 
+    // Ajouter a l'histoire
     public void presentation() {
         System.out.println("Je suis un" + mNom + " et j'ai" + mVie + " points de vie ");
         System.out.println("Mon épée fait" + mForce + " points de degats. ");

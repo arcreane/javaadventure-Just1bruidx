@@ -8,7 +8,9 @@ public class Salle {
     public Salle(String nom, Ennemi ennemi) {
         mNom = nom;
         mEnnemi = ennemi;
+
     }
+
 
     public String getNom() {
         return mNom;

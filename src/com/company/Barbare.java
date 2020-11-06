@@ -7,11 +7,13 @@ public class Barbare extends Ennemi {
     Random random = new Random();
 
         public Barbare() {
-            super(200, 10, "Attila", Arme.Sword);
+            super(200, 10, "Attila", Arme.Chopped);
         }
 
     @Override
     public int getForce() {
+
+        // Méthode pour le coup critique
         int force = super.getForce();
         int coupCritique = (random.nextInt(10)+1);
         if (coupCritique==1 || coupCritique == 2 || coupCritique == 3) {
