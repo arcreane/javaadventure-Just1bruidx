@@ -31,6 +31,22 @@ public void run() {
     System.out.println("Felicitation !! ");
     System.out.println("Vous avez gagné le tresor du Donjon Hurlant \uD83D\uDC8D\uD83D\uDCB0");
 }
+    public void menu() {
+        System.out.println("—————————————————————————————");
+        System.out.println("|           ⚔︎  ⚔            |");
+        System.out.println("|      Aventurier & CO      |");
+        System.out.println("|                           |");
+        System.out.println("|  appuyer sur une touche   |");
+        System.out.println("|                           |");
+        System.out.println("|             ⏅            |");
+        System.out.println("—————————————————————————————");
+
+        Scanner scan = new Scanner(System.in);
+        String entreJeu = scan.nextLine();
+        if (entreJeu.equals('e')) {
+            run();
+        }
+    }
     // Debut du script
     public boolean debut() {
 
@@ -56,7 +72,7 @@ public void run() {
 
     // Méthode pour le jeu de role - précise la vie du joueur/ennemi + vie joueur/ennemi
     Ennemi ennemi = salle.getEnnemi();
-        System.out.println("Tu entre dans la salle " + salle.getNom() +  " une ennemi te saute dessus, c'est un " + ennemi.getNom());
+        System.out.println("Tu entre dans la salle " + salle.getNom() +  ", un ennemi te saute dessus, c'est un " + ennemi.getNom());
         while(mAventurier.getVie() > 0 && ennemi.getVie() > 0) {
             System.out.println("Que souhaite tu faire : ");
             System.out.println("Tape au clavier pour entrer la reponse ");
@@ -71,12 +87,13 @@ public void run() {
                 if (degat == 0 ) {
                     System.out.println("Cela ne fait rien contre ce monstre..");
                 } else {
-                    System.out.println("Tu viens de lui infliger " + degat + " il lui reste " + ennemi.getVie());
+                    System.out.println("Tu viens de lui infliger " + degat + " de degat, il lui reste " + ennemi.getVie());
                 }
                 // L'aventurier est vulnérable a toutes les armes
                 degat = ennemi.taper(mAventurier, null);
-                System.out.println("Il t'a fait perdre " + degat);
-                System.out.println("Il te reste " + mAventurier.getVie());
+                System.out.println("Il t'a fait perdre " + degat + " points de vie ");
+                System.out.println("Il te reste " + mAventurier.getVie() + " de vie ");
+                System.out.println("");
 
             } else {
                 System.out.println("Cette arme n'est pas valide.. ");
