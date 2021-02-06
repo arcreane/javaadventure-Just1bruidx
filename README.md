@@ -1,5 +1,4 @@
 # javaadventure-Just1bruidx
-javaadventure-Just1bruidx created by GitHub Classroom
 
 Petit jeu de plates-formes en tour par tour 🏰
 
